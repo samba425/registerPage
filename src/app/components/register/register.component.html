@@ -1,0 +1,60 @@
+ 
+        <h3 class="text-info">Sign Up</h3> <hr> 
+  <div class="row">
+    <div class="col"> 
+    <div class='border'>
+      <div class="bg-primary height">
+         <span class="info"> Your Info </span> 
+        </div>
+      <div *ngIf="successTrue" class="alert alert-success" role="alert">
+          {{message}}
+        </div>
+      <form #register='ngForm' (ngSubmit)="onSubmit(register)" >
+        
+        <div class="form-group m-2">
+          <div class="pl-2">
+            <label for="name">Name:</label>
+          </div>
+          <div >
+            <input required type="text" id='name' class="form-control form-control-sm" placeholder='Name' name='FullName' ngModel>
+          </div>
+        </div>
+        <div class="form-group m-2">
+          <div class="pl-2">
+            <label for="email">Email:</label>
+          </div>
+          <div>
+            <input required type="email" id='email' class="form-control form-control-sm" placeholder='Email' name='Email' ngModel>
+          </div>
+        </div>
+        <div class="form-group m-2">
+          <div class="pl-2">
+            <label for="mobile">Phone Number:</label>
+          </div>
+          <div>
+            <input required type="text" id='mobile' class="form-control form-control-sm" placeholder='Phone Number' name='Phone' ngModel>
+          </div>
+        </div>
+        <div class="form-group m-2">
+          <div class="pl-2">
+            <label for="user">User Name:</label>
+          </div>
+          <div>
+            <input required type="text" id='user' class="form-control form-control-sm" placeholder='User Name' name='name' ngModel>
+          </div>
+        </div>
+        <div class="form-group m-2">
+          <div class="pl-2">
+            <label for="password">Password:</label>
+          </div>
+          <div>
+            <input required type="password" id='password' class="form-control form-control-sm" placeholder='Password'  name='password' ngModel>
+          </div>
+        </div>
+
+        <div class="text-center m-2">
+          <button  [disabled]=" !register.valid" class="btn btn-primary">Register</button>
+        </div>
+      </form>
+    </div></div>
+  </div> 
